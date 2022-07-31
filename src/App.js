@@ -1,19 +1,15 @@
-import { Link, Route, Router, Switch } from 'react-router-dom';
-import './App.css';
-import { Home } from './pages/home';
-import UserList from './pages/UserList';
-// import 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/Home";
+import UserList from "./pages/UserList";
 function App() {
   return (
-    <Router>
-      <Link to="/home">Home</Link>
-      <Link to="/userlist"></Link>
-      <Switch>
-        <Route path='/home'><Home/></Route>
-        <Route path='/userlist'><UserList/></Route>
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/userlist" element={<UserList />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
 export default App;
