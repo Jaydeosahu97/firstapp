@@ -29,14 +29,18 @@ export default function UserList() {
         </tr>
       </thead>
       <tbody>
-        {users.map((user,i) =>
-            <tr key={user.id}>
-                <td>{i+1}</td>
+        {users.map((user,i) => {
+          if (i!==0) 
+            return <tr key={user.id}>
+                <td>{i}</td>
                 <td>{user.username}</td>
                 <td>{user.id}</td>
                 <td>{user.firstName}</td>
                 <td>{user.lastName}</td>
             </tr>
+          else 
+            return <></>          
+        }
         )}
       </tbody>
     </Table>
