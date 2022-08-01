@@ -21,7 +21,6 @@ export default function UserList() {
     <Table striped bordered hover>
       <thead>
         <tr>
-          {/* <th>#</th> */}
           <th>S.No</th>
           <th>Username</th>
           <th>id</th>
@@ -32,7 +31,7 @@ export default function UserList() {
       <tbody>
         {users.map((user,i) =>
             <tr key={user.id}>
-                <td>{i}</td>
+                <td>{i+1}</td>
                 <td>{user.username}</td>
                 <td>{user.id}</td>
                 <td>{user.firstName}</td>
