@@ -12,7 +12,7 @@ export default function UserList() {
             console.log(data)
             setUsers(data)
         }).catch((err)=>{
-            console.log(err.message);
+            console.log('inside catch block '+err.message);
         });
     },[]);
 
@@ -30,7 +30,7 @@ export default function UserList() {
         </tr>
       </thead>
       <tbody>
-        {users.map((user,i) => {
+        {users.map((user,i) =>
             <tr key={user.id}>
                 <td>{i}</td>
                 <td>{user.username}</td>
@@ -38,7 +38,7 @@ export default function UserList() {
                 <td>{user.firstName}</td>
                 <td>{user.lastName}</td>
             </tr>
-        })}
+        )}
       </tbody>
     </Table>
         </div>
