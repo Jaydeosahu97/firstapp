@@ -3,6 +3,8 @@ In this application in trying to consume restful services which have Java as a b
 
 Here we have used `fetch()` for getting the data from the java. Further we converted those data into json and then defined our states.
 
+to learn about how to use `fetch()` you can go through [here](https://www.freecodecamp.org/news/fetch-data-react/). You can also find alternatives in the respective link.
+
 Next I've used the data and used `map()` for further iteration over that data.
 
 # Getting Started with Create React App
